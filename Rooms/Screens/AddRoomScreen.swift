@@ -10,25 +10,22 @@ import SwiftUI
 struct AddRoomScreen: View {
     
     @Environment(\.presentationMode) var presentation
-    
-    @State private var name: String = ""
-    @State private var width: String = ""
-    @State private var length: String = ""
-    @State private var color: Color = Color.clear 
+    @StateObject private var addRoomVM = AddRoomViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
-                    TextField("Enter room", text: $name)
-                    TextField("Enter width", text: $width)
-                    TextField("Enter length", text: $length)
-                    ColorPicker("Select color", selection: $color)
+                    TextField("Enter room", text: $addRoomVM.name)
+                    TextField("Enter width", text: $addRoomVM.width)
+                    TextField("Enter length", text: $addRoomVM.length)
+                    ColorPicker("Select color", selection: $addRoomVM.color)
                     
                     HStack {
                         Spacer()
                         Button("Save") {
-                            
+                            addRoomVM.saveRoom()
+                            presentation.wrappedValue.dismiss()
                         }
                         Spacer()
                     }

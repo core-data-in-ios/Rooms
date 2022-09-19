@@ -12,6 +12,11 @@
 		8DCCEC1625EAA8FF00F0B0F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCEC1525EAA8FF00F0B0F3 /* Preview Assets.xcassets */; };
 		8DCCEC2125EAA93500F0B0F3 /* AddRoomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCEC2025EAA93500F0B0F3 /* AddRoomScreen.swift */; };
 		8DCCEC2525EAA94400F0B0F3 /* RoomListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCEC2425EAA94400F0B0F3 /* RoomListScreen.swift */; };
+		E678B98828D7A6B100D4A901 /* RoomModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E678B98628D7A6B100D4A901 /* RoomModel.xcdatamodeld */; };
+		E678B98A28D823C300D4A901 /* Room+CodeDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678B98928D823C300D4A901 /* Room+CodeDataClass.swift */; };
+		E678B98C28D823F900D4A901 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678B98B28D823F900D4A901 /* Room+CoreDataProperties.swift */; };
+		E678B98E28D8252B00D4A901 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678B98D28D8252B00D4A901 /* CoreDataManager.swift */; };
+		E678B99028D8260000D4A901 /* AddRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678B98F28D8260000D4A901 /* AddRoomViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8DCCEC1725EAA8FF00F0B0F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCEC2025EAA93500F0B0F3 /* AddRoomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomScreen.swift; sourceTree = "<group>"; };
 		8DCCEC2425EAA94400F0B0F3 /* RoomListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListScreen.swift; sourceTree = "<group>"; };
+		E678B98728D7A6B100D4A901 /* RoomModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoomModel.xcdatamodel; sourceTree = "<group>"; };
+		E678B98928D823C300D4A901 /* Room+CodeDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+CodeDataClass.swift"; sourceTree = "<group>"; };
+		E678B98B28D823F900D4A901 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E678B98D28D8252B00D4A901 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E678B98F28D8260000D4A901 /* AddRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 		8DCCEC1F25EAA91B00F0B0F3 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				E678B98F28D8260000D4A901 /* AddRoomViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 		8DCCEC2725EAFD5A00F0B0F3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E678B98D28D8252B00D4A901 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -101,6 +113,9 @@
 		8DCCEC2825EAFD6D00F0B0F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E678B98628D7A6B100D4A901 /* RoomModel.xcdatamodeld */,
+				E678B98928D823C300D4A901 /* Room+CodeDataClass.swift */,
+				E678B98B28D823F900D4A901 /* Room+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,9 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E678B98828D7A6B100D4A901 /* RoomModel.xcdatamodeld in Sources */,
 				8DCCEC2525EAA94400F0B0F3 /* RoomListScreen.swift in Sources */,
 				8DCCEC2125EAA93500F0B0F3 /* AddRoomScreen.swift in Sources */,
+				E678B99028D8260000D4A901 /* AddRoomViewModel.swift in Sources */,
 				8DCCEC0F25EAA8FE00F0B0F3 /* RoomsApp.swift in Sources */,
+				E678B98C28D823F900D4A901 /* Room+CoreDataProperties.swift in Sources */,
+				E678B98E28D8252B00D4A901 /* CoreDataManager.swift in Sources */,
+				E678B98A28D823C300D4A901 /* Room+CodeDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +336,7 @@
 				DEVELOPMENT_TEAM = JLPE2XFURG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rooms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +358,7 @@
 				DEVELOPMENT_TEAM = JLPE2XFURG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rooms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E678B98628D7A6B100D4A901 /* RoomModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E678B98728D7A6B100D4A901 /* RoomModel.xcdatamodel */,
+			);
+			currentVersion = E678B98728D7A6B100D4A901 /* RoomModel.xcdatamodel */;
+			path = RoomModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8DCCEC0325EAA8FE00F0B0F3 /* Project object */;
 }
