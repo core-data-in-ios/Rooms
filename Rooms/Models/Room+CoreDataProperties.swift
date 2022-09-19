@@ -15,7 +15,7 @@ import UIKit
 extension Room {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Room> {
-        return NSFetchRequest<Room>(entityName: "Room")
+        return NSFetchRequest<Room>(entityName: "RoomModel")
     }
 
     @NSManaged public var color: UIColor?

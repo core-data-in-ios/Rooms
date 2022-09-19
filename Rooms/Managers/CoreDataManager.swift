@@ -15,7 +15,8 @@ class CoreDataManager {
     static let shared = CoreDataManager()
     
     private init() {
-        persistentContainer = NSPersistentContainer(name: "Room")
+        ValueTransformer.setValueTransformer(UIColorTransformer(), forName: NSValueTransformerName("UIColorTransformer"))
+        persistentContainer = NSPersistentContainer(name: "RoomModel")
         persistentContainer.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("failed to initialize CoreData\n\(error.localizedDescription)")
