@@ -21,10 +21,9 @@ struct RoomListScreen: View {
                     Text(room.name)
                     Spacer()
                     HStack {
-                        
+                        Color(room.color)
                     }
                     .frame(width: 50, height: 50)
-                    .background(Color(room.color))
                 }
             }
             

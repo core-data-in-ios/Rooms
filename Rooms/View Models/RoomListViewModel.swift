@@ -34,7 +34,11 @@ struct RoomViewModel {
     }
     
     var color: UIColor {
-        return room.color ?? UIColor.clear
+        if (room.color == .clear) {
+            return .green
+        }
+        
+        return room.color ?? UIColor.gray
     }
     
     var name: String {
