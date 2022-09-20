@@ -19,6 +19,12 @@ struct RoomListScreen: View {
             List(roomListVM.rooms, id:\.roomId) { room in
                 HStack {
                     Text(room.name)
+                    Spacer()
+                    HStack {
+                        
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(Color(room.color))
                 }
             }
             
@@ -31,7 +37,7 @@ struct RoomListScreen: View {
             })
             
             .sheet(isPresented: $isPresented, onDismiss: {
-                
+                roomListVM.populateRooms()
             } ,content: {
                 AddRoomScreen()
             })
