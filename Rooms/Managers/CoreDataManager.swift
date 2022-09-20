@@ -24,6 +24,16 @@ class CoreDataManager {
         }
     }
     
+    func getAllRooms() -> [Room] {
+        let fetchRequest: NSFetchRequest<Room> = Room.fetchRequest()
+        do {
+            return try persistentContainer.viewContext.fetch(fetchRequest)
+        } catch {
+            print("Failed to get any rooms")
+            return []
+        }
+    }
+    
     func save() {
         do {
             try persistentContainer.viewContext.save()

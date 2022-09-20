@@ -11,23 +11,23 @@ struct RoomListScreen: View {
     
     @State private var isPresented: Bool = false
     
+    @StateObject private var roomListVM = RoomListViewModel()
+    
     var body: some View {
         NavigationView {
             
-            List(0...20, id: \.self) { index in
-                
+            List(roomListVM.rooms, id:\.roomId) { room in
                 HStack {
-                    Text("Room \(index)")
+                    Text(room.name)
                 }
-                
-            }.listStyle(PlainListStyle())
+            }
             
             .navigationTitle("All Rooms")
             .navigationBarItems(trailing: Button("Add New Room") {
                 isPresented = true
             })
             .onAppear(perform: {
-                
+                roomListVM.populateRooms()
             })
             
             .sheet(isPresented: $isPresented, onDismiss: {
